@@ -1,45 +1,90 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Change the font for a more modern look */
 }
 
-.container{
+.container {
     min-height: 100vh;
     width: 100vw;
-    background-color: #292a2d;
+    background-color: #fffbf0; /* Light background for contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.input-box{
-    border: 1px solid black;
-    padding: 23px;
-
+.input-box {
+    border: 3px solid #333; /* Bold border */
+    padding: 30px;
+    border-radius: 15px; /* Slightly rounded corners for a softer look */
+    background-color: #f8f9fa; /* Light color for the input area */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    margin-bottom: 20px;
 }
-input, textarea{
+
+input, textarea {
     width: 100%;
     background-color: transparent;
     border: none;
     outline: none;
-    margin-top: 6px ;
-    color: white;
-
-
+    margin-top: 10px;
+    padding: 10px; /* Add some padding */
+    color: #333; /* Darker text for better readability */
+    font-size: 16px; /* Increased font size */
 }
 
-button{
-    background: transparent ;
-    color: white;
-    padding: 8px 12px;
-    border: 1px solid white;
-}
-#notes{
-    padding: 23px;
+button {
+    background: #333; /* Dark background for the button */
+    color: #fff; /* White text color */
+    padding: 12px 16px;
+    border: 3px solid #ff6363; /* Bold red border for the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for better UX */
+    transition: background 0.3s, transform 0.3s; /* Animation effects */
 }
 
-.note{
-    width: 200px;
-    padding: 12px;
-    border: 1px solid white;
-    background: transparent;
+button:hover {
+    background: #ff6363; /* Change background on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+#notes {
+    padding: 20px;
+    width: 100%; /* Full width for notes section */
+}
+
+.note {
+    width: 250px; /* Slightly wider notes */
+    padding: 15px;
+    border: 3px solid #ff6363; /* Bold red border for notes */
+    background: #ffffff; /* White background for notes */
+    border-radius: 10px; /* Rounded corners */
+    margin: 10px; /* Space between notes */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Transition for hover effects */
+}
+
+.note:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    background: #f0f0f0; /* Light gray background on hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.note .deleteNote {
+    position: absolute; /* Position delete button within note */
+    top: 5px; /* Position at the top */
+    right: 5px; /* Position at the right */
+    background: transparent; /* Transparent button */
+    color: #ff6363; /* Red color for delete button */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    transition: color 0.3s ease; /* Color transition for delete button */
+}
+
+.note .deleteNote:hover {
+    color: #d9534f; /* Darker red on hover */
+    transform: scale(1.1); /* Scale effect on hover */
 }
 
